@@ -31,14 +31,15 @@
     "build": "npm run rollup",
     "start": "rollup --config --watch",
     "rollup": "rollup --config",
-    "prepare": "run-s build",
+    "prepare": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
     "commit": "git pull && git add . && git commit && git push",
     "push": "npm run commit",
     "lint": "eslint ./**.js",
     "lint:fix": "eslint ./**.js --fix",
-    "merge-master": "git checkout master && git pull && git merge develop && git push && git checkout develop"
+    "merge-master": "git checkout master && git pull && git merge develop && git push && git checkout develop",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
