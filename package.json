@@ -1,0 +1,30 @@
+{
+  "name": "formatadores",
+  "version": "0.0.1",
+  "description": "formatadores simples de dados",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "jest": "^26.6.3",
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "commit": "git pull && git add . && git commit && git push",
+    "push": "npm run commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoguiSan/formatadores.git"
+  },
+  "author": "Nelson Salles de Barros Filho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoguiSan/formatadores/issues"
+  },
+  "homepage": "https://github.com/YoguiSan/formatadores#readme"
+}

@@ -1,0 +1,1 @@
+export { substituirCaracteresEspeciais } from './caracteresEspeciais';
