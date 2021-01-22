@@ -50,13 +50,12 @@ export const formatarTelefone = (entrada) => {
   return value;
 };
 
-export const formatarDinheiro = (entrada) => {
-  if (Number.isNaN(entrada)) return Constantes.MENSAGEM_CAMPO_NULL;
-  if (!entrada) return Constantes.MENSAGEM_CAMPO_NULL;
+export const formatarDinheiro = (entrada, moeda = 'BRL') => {
+  if (Number.isNaN(entrada) || !(entrada)) return Constantes.MENSAGEM_CAMPO_NULL;
 
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
-    currency: 'BRL',
+    currency: moeda,
   }).format(entrada);
 };
 

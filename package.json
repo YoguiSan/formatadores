@@ -53,7 +53,7 @@
   "homepage": "https://github.com/YoguiSan/formatadores#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint-fix & npm run test & npm run build"
+      "pre-commit": "npm run lint:fix & npm run test & npm run build"
     }
   }
 }
