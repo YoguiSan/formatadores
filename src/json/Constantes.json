@@ -1,0 +1,9 @@
+{
+  "mensagens": {
+    "MENSAGEM_CAMPO_NULL": "-",
+    "MENSAGEM_CAMPO_ZERO": "0",
+    "MENSAGEM_ERRO_REQUEST": "Ocorreu um erro ao realizar a requisição",
+    "MENSAGEM_PARAMETROS_INDEFINIDOS": "Ocorreu um erro ao realizar requisição (Parâmetros não encontrados)",
+    "MESSAGEM_ERRO_INESPERADO": "Ocorreu um erro inesperado"
+  }
+}
