@@ -2,11 +2,14 @@
   "name": "formatadores",
   "version": "0.0.1",
   "description": "formatadores simples de dados",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@rollup/plugin-json": "^4.1.0",
     "babel-jest": "^26.6.3",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -14,12 +17,21 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
     "jest": "^26.6.3",
-    "webpack": "^5.17.0",
-    "webpack-cli": "^4.4.0"
+    "rollup": "^2.38.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-jsx": "^1.0.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "npm run rollup",
+    "start": "rollup --config --watch",
+    "rollup": "rollup --config",
+    "prepare": "run-s build",
     "test": "jest",
     "test:watch": "jest --watch",
     "commit": "git pull && git add . && git commit && git push",
@@ -37,5 +49,10 @@
   "bugs": {
     "url": "https://github.com/YoguiSan/formatadores/issues"
   },
-  "homepage": "https://github.com/YoguiSan/formatadores#readme"
+  "homepage": "https://github.com/YoguiSan/formatadores#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-fix & npm run test & npm run build"
+    }
+  }
 }
