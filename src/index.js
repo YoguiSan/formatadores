@@ -13,4 +13,5 @@ export * as session from './sessionStorage';
 export {
   gerarIdAleatorio,
   regraDeTresPorcentagem,
+  obterElementoAleatorioArray,
 } from './utils';

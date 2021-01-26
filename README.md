@@ -1,2 +1,2 @@
 # formatadores
-Simples formatadores de texto, dinheiro, data, etc.
+Formatadores simples diversos (dinheiro, data, etc.), além de algumas funções utilitárias.
