@@ -77,15 +77,17 @@ export function formatarPorcentagem(entrada) {
 }
 */
 
-export const calcularIdadeAtual = (entrada) => {
+export const calcularIdadeAtual = (entrada, final = new Date()) => {
   if (entrada) {
-    const currentDate = new Date();
-
     const initialDate = new Date(entrada);
 
+    const finalDate = new Date(final);
+
     if (!Number.isNaN(initialDate.getDate())) {
-      const diff = (currentDate - initialDate) / (1000 * 60 * 60 * 24 * 365);
+      const diff = (finalDate - initialDate) / (1000 * 60 * 60 * 24 * 365);
       return parseInt(diff, 10);
-    } return false;
-  } return false;
+    }
+    return false;
+  }
+  return false;
 };

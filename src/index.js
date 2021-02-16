@@ -1,6 +1,7 @@
 export {
   substituirCaracteresEspeciais,
   formatarTelefone,
+  formatarDinheiro,
   calcularIdadeAtual,
 } from './formatadores';
 
