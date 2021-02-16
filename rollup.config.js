@@ -49,8 +49,7 @@ export default [
         compact: true,
         preferConst: true,
       }),
-      commonjs(
-      ),
+      commonjs(),
     ],
   },
 ];

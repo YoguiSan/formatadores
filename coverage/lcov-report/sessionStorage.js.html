@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">60.71% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/28</span>
+                <span class='fraction'>17/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">60.71% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>28/28</span>
+                <span class='fraction'>17/28</span>
             </div>
         
             
@@ -91,24 +91,24 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -118,25 +118,25 @@
   return sessionStorage;
 };
 &nbsp;
-export const get = (name) =&gt; {
-  const item = sessionStorage.getItem(name);
-  return item;
-};
+export const get = (<span class="fstat-no" title="function not covered" >name) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  const item = sessionStorage.getItem(name);</span>
+<span class="cstat-no" title="statement not covered" >  return item;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;
-export const set = (name, value) =&gt; {
-  sessionStorage.setItem(name, value);
-  return sessionStorage.getItem(name);
-};
+export const set = <span class="fstat-no" title="function not covered" >(name, value) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sessionStorage.setItem(name, value);</span>
+<span class="cstat-no" title="statement not covered" >  return sessionStorage.getItem(name);</span>
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;
-export const remove = (name) =&gt; {
-  sessionStorage.removeItem(name);
-  return sessionStorage;
-};
+export const remove = (<span class="fstat-no" title="function not covered" >name) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sessionStorage.removeItem(name);</span>
+<span class="cstat-no" title="statement not covered" >  return sessionStorage;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;
 export const clear = (name) =&gt; {
-  if (name) {
-    return remove(name);
-  }
+  if (name) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return remove(name);</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
   sessionStorage.clear();
 &nbsp;
   return sessionStorage;
@@ -148,7 +148,7 @@ export const clear = (name) =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Feb 16 2021 15:03:43 GMT-0300 (Horário Padrão de Brasília)
+                at Tue Feb 16 2021 16:16:45 GMT-0300 (Horário Padrão de Brasília)
             </div>
         </div>
         <script src="prettify.js"></script>

@@ -6,7 +6,8 @@ import {
 
 describe('testes de funções utilitárias', () => {
   test('gera um ID aleatório', () => {
-    expect(gerarIdAleatorio).toBeDefined();
+    expect(gerarIdAleatorio()).toBeDefined();
+    expect(gerarIdAleatorio(1)).toBeDefined();
   });
 
   test('faz regra de 3', () => {
