@@ -28,9 +28,14 @@ describe('testes de formatação de telefone', () => {
 
     phone = '12345678';
     expect(formatarTelefone(phone)).toEqual('1234-5678');
+    phone = 12345678;
+    expect(formatarTelefone(phone)).toEqual('1234-5678');
 
     phone = '987654321';
     expect(formatarTelefone(phone)).toEqual('9 8765-4321');
+
+    phone = 'o1234567';
+    expect(formatarTelefone(phone)).toBeFalsy();
 
     expect(formatarTelefone()).toBeUndefined();
   });
@@ -40,6 +45,7 @@ describe('testes de formatação de dinheiro', () => {
   test('formata um valor de dinheiro', () => {
     expect(formatarDinheiro(111.22)).toEqual('R$ 111,22');
     expect(formatarDinheiro(50.69, 'USD')).toEqual('US$ 50,69');
+    expect(formatarDinheiro('a')).toBeFalsy();
   });
 });
 

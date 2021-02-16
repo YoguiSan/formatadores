@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1613503005046" clover="3.2.0">
-  <project timestamp="1613503005046" name="All files">
-    <metrics statements="161" coveredstatements="150" conditionals="30" coveredconditionals="26" methods="13" coveredmethods="10" elements="204" coveredelements="186" complexity="0" loc="161" ncloc="161" packages="1" files="5" classes="5"/>
+<coverage generated="1613511206546" clover="3.2.0">
+  <project timestamp="1613511206546" name="All files">
+    <metrics statements="162" coveredstatements="157" conditionals="37" coveredconditionals="36" methods="13" coveredmethods="12" elements="212" coveredelements="205" complexity="0" loc="162" ncloc="162" packages="1" files="5" classes="5"/>
     <file name="formatadores.js" path="E:\git\Pessoal\formatadores\src\formatadores.js">
-      <metrics statements="93" coveredstatements="93" conditionals="19" coveredconditionals="16" methods="4" coveredmethods="4"/>
+      <metrics statements="93" coveredstatements="93" conditionals="24" coveredconditionals="24" methods="4" coveredmethods="4"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="4" count="2" type="stmt"/>
       <line num="5" count="2" type="stmt"/>
       <line num="6" count="2" type="stmt"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="8" count="2" type="cond" truecount="1" falsecount="0"/>
+      <line num="7" count="2" type="cond" truecount="1" falsecount="0"/>
+      <line num="8" count="12" type="stmt"/>
       <line num="9" count="12" type="stmt"/>
-      <line num="10" count="12" type="stmt"/>
-      <line num="11" count="12" type="cond" truecount="1" falsecount="0"/>
+      <line num="10" count="12" type="cond" truecount="1" falsecount="0"/>
+      <line num="11" count="12" type="stmt"/>
       <line num="12" count="12" type="stmt"/>
       <line num="13" count="12" type="stmt"/>
       <line num="14" count="12" type="stmt"/>
       <line num="15" count="12" type="stmt"/>
-      <line num="16" count="12" type="stmt"/>
+      <line num="16" count="2" type="stmt"/>
       <line num="17" count="2" type="stmt"/>
       <line num="18" count="2" type="stmt"/>
-      <line num="19" count="2" type="stmt"/>
-      <line num="20" count="1" type="stmt"/>
-      <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="22" count="5" type="stmt"/>
-      <line num="23" count="5" type="stmt"/>
-      <line num="24" count="5" type="cond" truecount="1" falsecount="0"/>
-      <line num="25" count="4" type="stmt"/>
-      <line num="26" count="4" type="stmt"/>
-      <line num="27" count="4" type="stmt"/>
-      <line num="28" count="4" type="cond" truecount="0" falsecount="1"/>
-      <line num="29" count="4" type="cond" truecount="0" falsecount="1"/>
-      <line num="30" count="4" type="cond" truecount="1" falsecount="0"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="32" count="1" type="stmt"/>
-      <line num="33" count="1" type="stmt"/>
-      <line num="34" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="21" count="7" type="stmt"/>
+      <line num="22" count="7" type="stmt"/>
+      <line num="23" count="7" type="stmt"/>
+      <line num="24" count="7" type="cond" truecount="1" falsecount="0"/>
+      <line num="25" count="6" type="stmt"/>
+      <line num="26" count="6" type="cond" truecount="1" falsecount="0"/>
+      <line num="27" count="5" type="stmt"/>
+      <line num="28" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="6" type="cond" truecount="1" falsecount="0"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="34" count="6" type="cond" truecount="2" falsecount="0"/>
       <line num="35" count="1" type="stmt"/>
       <line num="36" count="1" type="stmt"/>
       <line num="37" count="1" type="stmt"/>
@@ -52,12 +52,12 @@
       <line num="46" count="1" type="stmt"/>
       <line num="47" count="1" type="stmt"/>
       <line num="48" count="1" type="stmt"/>
-      <line num="49" count="4" type="stmt"/>
-      <line num="50" count="5" type="stmt"/>
-      <line num="51" count="5" type="stmt"/>
+      <line num="49" count="6" type="stmt"/>
+      <line num="50" count="6" type="stmt"/>
+      <line num="51" count="6" type="stmt"/>
       <line num="52" count="1" type="stmt"/>
       <line num="53" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="54" count="2" type="cond" truecount="0" falsecount="1"/>
+      <line num="54" count="3" type="cond" truecount="3" falsecount="0"/>
       <line num="55" count="2" type="stmt"/>
       <line num="56" count="2" type="stmt"/>
       <line num="57" count="2" type="stmt"/>
@@ -120,35 +120,36 @@
       <line num="18" count="1" type="stmt"/>
     </file>
     <file name="sessionStorage.js" path="E:\git\Pessoal\formatadores\src\sessionStorage.js">
-      <metrics statements="28" coveredstatements="17" conditionals="3" coveredconditionals="2" methods="5" coveredmethods="2"/>
+      <metrics statements="29" coveredstatements="24" conditionals="5" coveredconditionals="4" methods="5" coveredmethods="4"/>
       <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="0" type="stmt"/>
-      <line num="8" count="0" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
+      <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
       <line num="10" count="1" type="stmt"/>
       <line num="11" count="1" type="stmt"/>
-      <line num="12" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
-      <line num="14" count="0" type="stmt"/>
+      <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
       <line num="15" count="1" type="stmt"/>
       <line num="16" count="1" type="stmt"/>
-      <line num="17" count="0" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
       <line num="18" count="0" type="stmt"/>
       <line num="19" count="0" type="stmt"/>
-      <line num="20" count="1" type="stmt"/>
-      <line num="21" count="1" type="cond" truecount="1" falsecount="0"/>
-      <line num="22" count="1" type="cond" truecount="0" falsecount="1"/>
-      <line num="23" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="22" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="23" count="1" type="cond" truecount="0" falsecount="1"/>
       <line num="24" count="0" type="stmt"/>
-      <line num="25" count="1" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
       <line num="26" count="1" type="stmt"/>
       <line num="27" count="1" type="stmt"/>
       <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
     </file>
     <file name="url.js" path="E:\git\Pessoal\formatadores\src\url.js">
       <metrics statements="12" coveredstatements="12" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>

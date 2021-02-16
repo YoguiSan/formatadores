@@ -3,10 +3,7 @@ export const create = (name) => {
   return sessionStorage;
 };
 
-export const get = (name) => {
-  const item = sessionStorage.getItem(name);
-  return item;
-};
+export const get = (name) => sessionStorage.getItem(name);
 
 export const set = (name, value) => {
   sessionStorage.setItem(name, value);

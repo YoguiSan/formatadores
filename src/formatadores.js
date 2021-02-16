@@ -1,5 +1,4 @@
 import CaracteresEspeciais from './json/CaracteresEspeciais.json';
-import Constantes from './json/Constantes.json';
 
 export const substituirCaracteresEspeciais = (entrada) => {
   let saida = entrada.toLowerCase();
@@ -21,6 +20,7 @@ export const substituirCaracteresEspeciais = (entrada) => {
 export const formatarTelefone = (entrada) => {
   let value;
   const val = [];
+
   if (entrada) {
     if (
       typeof (entrada) !== 'number'
@@ -51,7 +51,7 @@ export const formatarTelefone = (entrada) => {
 };
 
 export const formatarDinheiro = (entrada, moeda = 'BRL') => {
-  if (Number.isNaN(entrada) || !(entrada)) return Constantes.MENSAGEM_CAMPO_NULL;
+  if (Number.isNaN(entrada) || typeof (entrada) !== 'number' || !(entrada)) return false;
 
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',

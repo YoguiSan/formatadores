@@ -1,7 +1,20 @@
 {
   "name": "formatadores",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Formatadores simples de dados e funções utilitárias",
+  "keywords": [
+    "formatadores",
+    "data",
+    "formatar",
+    "moeda",
+    "dinheiro",
+    "telefone",
+    "fone",
+    "caracteres",
+    "caracteres especiais",
+    "utilidades",
+    "utilitários"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "devDependencies": {

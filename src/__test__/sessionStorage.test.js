@@ -8,12 +8,12 @@ describe('testes de sessão', () => {
     expect(currentSession.SessionName).toEqual('testSession');
   });
 
-  xtest('deve guardar uma chave e valor', () => {
-    const value = session.set('key', 'value');
-    expect(value).toEqual('value');
+  test('deve guardar uma chave e valor', () => {
+    session.set('key', 'value');
+    expect(session.get('key')).toEqual('value');
   });
 
-  xtest('deve ler a partir de uma chave no armazenamento da sessão', () => {
+  test('deve ler a partir de uma chave no armazenamento da sessão', () => {
     const item = session.get('key');
     expect(item).toEqual('value');
   });
