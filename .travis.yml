@@ -4,3 +4,8 @@ node_js:
 branches:
   only:
     - master
+deploy:
+  provider: npm
+  email: "nelsonsbf@protonmail.com"
+  api_key: NPM_TOKEN_YOGUISAN
+env:
