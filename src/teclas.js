@@ -1,3 +1,5 @@
+import { gerarIdAleatorio } from './utils';
+
 // eslint-disable-next-line import/prefer-default-export
 export function adicionarListenerTeclas(keys, callback) {
   let listen = keys;
@@ -24,7 +26,7 @@ export function adicionarListenerTeclas(keys, callback) {
     if (Object.keys(matches).length === listen.length) {
       pressedKeys = {};
       matches = {};
-      callback();
+      return callback();
     }
   });
 
@@ -35,5 +37,13 @@ export function adicionarListenerTeclas(keys, callback) {
     }
   });
 
-  // document.CustomKeyListeners(keys, callbacks);
+  const identifier = `listener-${gerarIdAleatorio()}`;
+  if (!document.CustomListeners) {
+    document.CustomListeners = {};
+  }
+  if (!document.CustomListeners[identifier]) {
+    document.CustomListeners[identifier] = this;
+  }
+
+  return identifier;
 }
