@@ -8,7 +8,7 @@ describe('testes de sessão', () => {
     expect(currentSession.SessionName).toEqual('testSession');
   });
 
-  xtest('deve guardar uma chave e valor', () => {
+  test('deve guardar uma chave e valor', () => {
     session.set('key', 'value');
     expect(session.get('key')).toEqual('value');
   });
@@ -19,12 +19,12 @@ describe('testes de sessão', () => {
     expect(item).toBeDefined();
   });
 
-  xtest('deve remover a partir de uma chave no armazenamento da sessão', () => {
+  test('deve remover a partir de uma chave no armazenamento da sessão', () => {
     currentSession = session.remove('key');
     expect(currentSession.SessionName).toEqual('testSession');
   });
 
-  xtest('deve limpar a partir de uma chave no armazenamento da sessão', () => {
+  test('deve limpar a partir de uma chave no armazenamento da sessão', () => {
     currentSession = session.clear('key');
     expect(currentSession.SessionName).toEqual('testSession');
   });
