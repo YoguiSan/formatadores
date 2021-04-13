@@ -16,3 +16,7 @@ export {
   regraDeTresPorcentagem,
   obterElementoAleatorioArray,
 } from './utils';
+
+export {
+  adicionarListenerTeclas,
+} from './teclas';
