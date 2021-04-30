@@ -1,0 +1,28 @@
+{
+  "name": "teste",
+  "version": "1.2.0",
+  "description": "Mock do package.json",
+  "keywords": [
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "dependencies": {
+    "a": "0.1.1"
+  },
+  "devDependencies": {
+    "b": "1.0.0"
+  },
+  "scripts": {
+    "run": "go"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://localhost:333"
+  },
+  "author": "Joseph Doe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://localhost:333/issues"
+  },
+  "homepage": "https://localhost:333#readme"
+}

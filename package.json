@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -46,6 +46,8 @@
     "jest-sonar-reporter": "^2.0.0",
     "jest-transform-stub": "^2.0.0",
     "mock-local-storage": "^1.1.17",
+    "nock": "^13.0.11",
+    "node-fetch": "^2.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
