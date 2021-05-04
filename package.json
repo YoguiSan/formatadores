@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -66,7 +66,8 @@
     "lint": "eslint ./**.js",
     "lint:fix": "eslint ./**.js --fix",
     "merge-master": "git checkout master && git pull && git merge develop && git push && git checkout develop",
-    "publish": "npm publish"
+    "publish": "git checkout master && npm publish && git checkout develop",
+    "push-and-publish": "npm run push && npm run merge-master npm run publish"
   },
   "repository": {
     "type": "git",

@@ -10,11 +10,20 @@ describe('testes de checagem de versão', () => {
   test('verifica que a versão é menor que a do meta.json', async () => {
     nock(url)
       .get('/')
+      .query(true)
       .reply(200, { version: '1.2.1' });
 
     const {
       isOutdated,
+      error,
+      version,
     } = await checarVersao(PackageJson, url, callback);
+
+    if (error) {
+      console.log(error);
+    }
+
+    console.log(version);
 
     expect(isOutdated).toBeTruthy();
   });
@@ -22,6 +31,7 @@ describe('testes de checagem de versão', () => {
   test('verifica que a versão é maior que a do meta.json', async () => {
     nock(url)
       .get('/')
+      .query(true)
       .reply(200, { version: '1.01' });
 
     const {
@@ -29,5 +39,16 @@ describe('testes de checagem de versão', () => {
     } = await checarVersao(PackageJson, url, callback);
 
     expect(isOutdated).toBeFalsy();
+  });
+
+  test('exibe erro ocorrido ao tentar comparar versões', async () => {
+    nock(url)
+      .get('/')
+      .query(true)
+      .reply(400, { error: 'yes' });
+
+    const { error } = await checarVersao(PackageJson, url, callback);
+
+    expect(error).toEqual('yes');
   });
 });
