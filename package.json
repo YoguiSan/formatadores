@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -17,6 +17,9 @@
   ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
+  "bin": {
+    "gerar-versao": "./gerar-versao.js"
+  },
   "dependencies": {
     "rollup": "^2.38.0",
     "rollup-plugin-babel": "^4.4.0",
@@ -77,7 +80,7 @@
   "homepage": "https://github.com/YoguiSan/formatadores#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix & npm run test & npm run build"
+      "pre-commit": "npm run lint:fix & npm run test && npm run build"
     }
   }
 }
