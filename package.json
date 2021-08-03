@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -36,6 +36,8 @@
     "@rollup/plugin-json": "^4.1.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "babel-jest": "^26.6.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.2.0",
     "enzyme": "^3.11.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -82,6 +84,11 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint:fix & npm run test && npm run build"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }

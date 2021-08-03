@@ -3,6 +3,7 @@ import {
   formatarTelefone,
   formatarDinheiro,
   calcularIdadeAtual,
+  primeiroCaracterParaMaiuscula,
 } from '..';
 
 import TestConfig from './configure';
@@ -71,4 +72,16 @@ describe('testes de cálculo de idade', () => {
     expect(calcularIdadeAtual()).toBeFalsy();
     expect(calcularIdadeAtual('fsdzgsdfg')).toBeFalsy();
   });
+});
+
+describe('testes de formatadores', () => {
+  const palavra = 'palavra';
+  const frase = 'frase de teste';
+
+  test('torna a primeira letra maiúscula', () => expect(
+    primeiroCaracterParaMaiuscula(palavra),
+  ).toEqual('Palavra'));
+  test('torna a primeira letra de cada palavra maiúscula', () => expect(
+    primeiroCaracterParaMaiuscula(frase),
+  ).toEqual('Frase De Teste'));
 });

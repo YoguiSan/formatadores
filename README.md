@@ -6,6 +6,7 @@ Formatadores simples diversos (dinheiro, data, etc.), além de algumas funções
 - formatarTelefone: formata telefones de 8 e 9 dígitos (sem e com DDD), adicionando traços e parênteses. Exemplos: 11987654321 -> (11) 98765-4321
 - formatarDinheiro: formata um número como moeda (padrão: real brasileiro)
 - substituirCaracteresEspeciais: substitui os caracteres especiais pelos seus respectivos
+- primeiraLetraParaMaiuscula: disponível também como **primeiroCaracterParaMaiuscula**, transforma o primeiro caracter de uma palavra, ou o primeiro caracter de cada palavra em uma frase, em maiúscula. Atualmennte unciona apenas para frases separadas por um *espaço* (vírgulas e pontos antes/depois do espaço não interferem)
 
 ## Funções de sessão
 AS funções de session storage foram compiladas em cinco funções simples, para facilitar a manipulação dos dados nela

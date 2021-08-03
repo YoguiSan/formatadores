@@ -3,6 +3,8 @@ export {
   formatarTelefone,
   formatarDinheiro,
   calcularIdadeAtual,
+  primeiraLetraParaMaiuscula,
+  primeiraLetraParaMaiuscula as primeiroCaracterParaMaiuscula,
 } from './formatadores';
 
 export {
