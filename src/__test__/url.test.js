@@ -1,7 +1,7 @@
 import { separarParametrosUrl } from '..';
 
 describe('testes de parâmetros da URL', () => {
-  test('deve retornar um objeto com os parâmetros da URL separados', () => {
+  test('deve retornar um objeto com os parâmetros da URL separados (passando window.location.search como parâmetro)', () => {
     const query = '?parametro1=um&parametro2=dois';
 
     expect(separarParametrosUrl(query)).toEqual({
@@ -10,7 +10,32 @@ describe('testes de parâmetros da URL', () => {
     });
   });
 
-  test('retorna um objeto vazio caso não exista query na URL', () => {
+  global.window = Object.create(window);
+
+  const url = 'http://tes.te';
+  const search = '?param=1';
+  Object.defineProperty(window, 'location', {
+    value: {
+      href: url,
+      search,
+    },
+    writable: true,
+  });
+
+  test('deve retornar um objeto com os parâmetros da URL separados (sem informar window.location.search como parâmetro)', () => {
+    expect(separarParametrosUrl()).toEqual({
+      param: '1',
+    });
+  });
+
+  test('retorna um objeto vazio caso não exista query informada manualmente, nem no window.location.search', () => {    
+    Object.defineProperty(window, 'location', {
+      value: {
+        href: url,
+        search: undefined,
+      },
+      writable: true,
+    });
     expect(separarParametrosUrl()).toEqual({});
   });
 });
