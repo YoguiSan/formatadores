@@ -15,7 +15,7 @@ describe('testes de parâmetros da URL', () => {
   const url = 'http://tes.te';
   const search = '?param=1';
   const hash = {
-    '#hash': 'hash',
+    '#/?hash': 'hash',
   };
 
   Object.defineProperty(window, 'location', {

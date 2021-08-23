@@ -11,7 +11,7 @@ export const separarParametrosUrl = (query = window.location.search || window.lo
   } else if (typeof (query) === 'object') {
     Object.keys(query).forEach((key) => {
       if (key.indexOf('#') === 0) {
-        parsedQueries[key.replace('#', '')] = query[key];
+        parsedQueries[key.replace('#', '').replace('/', '').replace('?', '')] = query[key];
       }
     });
   }
