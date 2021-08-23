@@ -14,6 +14,10 @@ describe('testes de parâmetros da URL', () => {
 
   const url = 'http://tes.te';
   const search = '?param=1';
+  const hash = {
+    '#hash': 'hash',
+  };
+
   Object.defineProperty(window, 'location', {
     value: {
       href: url,
@@ -28,7 +32,7 @@ describe('testes de parâmetros da URL', () => {
     });
   });
 
-  test('retorna um objeto vazio caso não exista query informada manualmente, nem no window.location.search', () => {    
+  test('retorna um objeto vazio caso não exista query informada manualmente, nem no window.location.search', () => {
     Object.defineProperty(window, 'location', {
       value: {
         href: url,
@@ -37,5 +41,20 @@ describe('testes de parâmetros da URL', () => {
       writable: true,
     });
     expect(separarParametrosUrl()).toEqual({});
+  });
+
+  test('obtém os parâmetros do hash', () => {
+    Object.defineProperty(window, 'location', {
+      value: {
+        href: url,
+        search: undefined,
+        hash,
+      },
+      writable: true,
+    });
+
+    expect(separarParametrosUrl()).toEqual({
+      hash: 'hash',
+    });
   });
 });

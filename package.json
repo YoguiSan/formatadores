@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.3.3",
+  "version": "1.3.5",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -63,7 +63,7 @@
     "prepare": "npm run build",
     "test": "jest --config ./jest.config.js",
     "test:watch": "jest --config ./jest.config.js --watch",
-    "commit": "git pull && git add . && git commit && git push",
+    "commit": "git pull && git add . && git cz && git push",
     "push": "npm run commit",
     "lint": "eslint ./**.js",
     "lint:fix": "eslint ./**.js --fix",

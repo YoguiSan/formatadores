@@ -17,7 +17,7 @@ AS funções de session storage foram compiladas em cinco funções simples, par
 - clear: aceita um parâmetro (opcional) nome, se especificado limpa o parâmetro informado do session storage (executa a função remove acima); se não for informado o nome, limpa a sessão
 
 ## Funções de URL
-- separarParametrosUrl: retorna os parâmetros da URL (query parameters) em formato JSON
+- separarParametrosUrl: retorna os parâmetros da URL (query parameters) em formato JSON. Aceita um parâmetro query (opcional). Caso não seja informado o parâmetro, tentará obter primeiro da **window.location.search**, e caso não exista, da **window.location.hash**
 
 ## Funções de teclas
 - adicionarListenerTeclas: adiciona um event listener ao navegador para disparar uma ação quando as teclas especificadas forem pressionadas ao mesmo tempo. Requer dois parâmetros, teclas (keys, que deve ser um array de caracteres ou uma string) e callback (função a ser executada quando a combinação de teclas for pressionada)
