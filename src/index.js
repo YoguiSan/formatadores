@@ -22,3 +22,7 @@ export {
 export {
   adicionarListenerTeclas,
 } from './teclas';
+
+export {
+  default as Criptografia,
+} from './Criptografia';
