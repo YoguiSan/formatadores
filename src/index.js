@@ -1,4 +1,4 @@
-import Criptografia from './Criptografia';
+const Criptografia = require('./Criptografia');
 
 export {
   substituirCaracteresEspeciais,
