@@ -1,4 +1,4 @@
-import * as Criptografia from './Criptografia';
+import Criptografia from './Criptografia';
 
 export {
   substituirCaracteresEspeciais,

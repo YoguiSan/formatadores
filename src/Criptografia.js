@@ -1,5 +1,5 @@
-const CryptoBrowser = require('crypto-browserify');
-const CryptoNode = require('crypto');
+import CryptoBrowser from 'crypto-browserify';
+import CryptoNode from 'crypto';
 
 const isBrowser = typeof (window) !== 'undefined';
 
@@ -61,6 +61,6 @@ class Criptografia {
   }
 }
 
-const createInstance = (algorithm, secretKey) => new Criptografia(algorithm, secretKey);
+const instance = (algorithm, secretKey) => new Criptografia(algorithm, secretKey);
 
-module.exports = createInstance;
+export default instance;
