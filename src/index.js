@@ -1,3 +1,5 @@
+import Criptografia from './Criptografia';
+
 export {
   substituirCaracteresEspeciais,
   substituirCaracteresEspeciais as replaceSpecialCharacters,
@@ -33,7 +35,9 @@ export {
   adicionarListenerTeclas as addKeysListener,
 } from './teclas';
 
+const Cryptography = Criptografia;
+
 export {
-  default as Criptografia,
-  default as Criptography,
-} from './Criptografia';
+  Criptografia,
+  Cryptography,
+};
