@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -81,7 +81,8 @@
     "merge-master": "git checkout master && git pull && git merge develop && git push && git checkout develop",
     "prepare:husky": "husky install",
     "publish": "git checkout master && npm publish & git checkout develop",
-    "push-and-publish": "npm run push && npm run merge-master && npm run publish"
+    "push-and-publish": "npm run push && npm run merge-master && npm run publish",
+    "prepare-husky": "husky install"
   },
   "repository": {
     "type": "git",
