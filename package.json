@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -15,7 +15,15 @@
     "utilidades",
     "utilitários",
     "url",
-    "query"
+    "query",
+    "formatters",
+    "date",
+    "format",
+    "money",
+    "phone",
+    "characters",
+    "special characters",
+    "utilities"
   ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
