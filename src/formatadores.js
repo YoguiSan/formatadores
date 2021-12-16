@@ -92,16 +92,18 @@ export const calcularIdadeAtual = (entrada, final = new Date()) => {
   return false;
 };
 
-export const primeiraLetraParaMaiuscula = (string) => {
+export const primeiraLetraParaMaiuscula = (string = '') => {
   const result = [];
   const words = string.split(' ');
 
   words.forEach((word) => {
     const splitWord = word.split('');
 
-    splitWord[0] = splitWord[0].toUpperCase();
+    if (splitWord.length > 0) {
+      splitWord[0] = splitWord[0].toUpperCase();
 
-    result.push(splitWord.join(''));
+      result.push(splitWord.join(''));
+    }
   });
 
   return result.join(' ');

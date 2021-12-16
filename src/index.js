@@ -16,6 +16,7 @@ export {
 
 export {
   separarParametrosUrl,
+  obterParametrosUrl,
   separarParametrosUrl as getQueryParams,
 } from './url';
 

@@ -98,5 +98,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:fix & npm run test & npm run build"
+    }
   }
 }

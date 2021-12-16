@@ -1,5 +1,10 @@
-// eslint-disable-next-line import/prefer-default-export
-export const separarParametrosUrl = (query = window.location.search || window.location.hash) => {
+export const separarParametrosUrl = (informedQuery) => {
+  if (!informedQuery && window?.location?.search) {
+    return new URLSearchParams(window?.location?.search);
+  }
+
+  const query = informedQuery || window?.location?.search || window?.location?.hash;
+
   const parsedQueries = {};
   if (query && typeof (query) === 'string') {
     const splitQuery = query.split('&');
@@ -17,3 +22,5 @@ export const separarParametrosUrl = (query = window.location.search || window.lo
   }
   return parsedQueries;
 };
+
+export const obterParametrosUrl = separarParametrosUrl;
