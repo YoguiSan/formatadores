@@ -31,6 +31,7 @@
     "gerar-versao": "./gerar-versao.js"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "crypto-browserify": "^3.12.0",
     "rollup": "^2.38.0",
     "rollup-plugin-babel": "^4.4.0",
@@ -78,11 +79,12 @@
     "push": "npm run commit",
     "lint": "eslint ./**.js",
     "lint:fix": "eslint ./**.js --fix",
-    "merge-master": "git checkout master && git pull && git merge develop && git push && git checkout develop",
+    "merge:master": "git checkout master && git pull && git merge develop && git push && git checkout develop",
     "prepare:husky": "husky install",
     "publish": "git checkout master && npm publish & git checkout develop",
     "push-and-publish": "npm run push && npm run merge-master && npm run publish",
-    "prepare-husky": "husky install"
+    "prepare:all": "npm i npm run prepare:husky && npm run instal::testing-environment",
+    "install:testing-environment": "cd src/__test__/testing-environment && npm i && npm i -S ../../../ && ../../../"
   },
   "repository": {
     "type": "git",
