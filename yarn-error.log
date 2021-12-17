@@ -1,0 +1,141 @@
+Arguments: 
+  E:\Program Files\nodejs\node.exe C:\Users\Pichau\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js prepare:all
+
+PATH: 
+  E:\cmder\vendor\bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Python38\Scripts\;C:\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Users\Pichau\AppData\Roaming\npm;E:\Program Files (x86)\Touch Portal\plugins\adb\platform-tools;E:\Program Files\nodejs\;E:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;E:\Program Files\Microsoft SQL Server\150\Tools\Binn\;E:\Program Files\Microsoft SQL Server\150\DTS\Binn\;E:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;E:\Program Files\PuTTY\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;E:\Program Files\Git\cmd;E:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Pichau\AppData\Local\Microsoft\WindowsApps;E:\Users\Pichau\AppData\Local\Programs\Microsoft VS Code\bin;E:\Program Files (x86)\mitmproxy\bin;E:\Program Files\nodejs;E:\Program Files\JetBrains\PyCharm Community Edition 2020.3.2\bin;C:\Users\Pichau\AppData\Roaming\npm;E:\Program Files\Git\mingw64\bin;E:\Program Files\Git\usr\bin;E:\cmder
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.15.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\git\Pessoal\formatadores\package.json: Unexpected string in JSON at position 1940
+      at JSON.parse (<anonymous>)
+      at C:\Users\Pichau\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Pichau\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Pichau\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "formatadores",
+    "version": "1.5.0",
+    "description": "Formatadores simples de dados e funções utilitárias",
+    "keywords": [
+      "formatadores",
+      "data",
+      "formatar",
+      "moeda",
+      "dinheiro",
+      "telefone",
+      "fone",
+      "caracteres",
+      "caracteres especiais",
+      "utilidades",
+      "utilitários",
+      "url",
+      "query",
+      "formatters",
+      "date",
+      "format",
+      "money",
+      "phone",
+      "characters",
+      "special characters",
+      "utilities"
+    ],
+    "main": "dist/index.js",
+    "module": "dist/index.modern.js",
+    "bin": {
+      "gerar-versao": "./gerar-versao.js"
+    },
+    "dependencies": {
+      "crypto": "^1.0.1",
+      "crypto-browserify": "^3.12.0",
+      "rollup": "^2.38.0",
+      "rollup-plugin-babel": "^4.4.0",
+      "rollup-plugin-commonjs": "^10.1.0",
+      "rollup-plugin-copy": "^3.3.0",
+      "rollup-plugin-jsx": "^1.0.3",
+      "rollup-plugin-node-resolve": "^5.2.0",
+      "rollup-plugin-peer-deps-external": "^2.2.4"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.10",
+      "@babel/preset-env": "^7.12.11",
+      "@babel/preset-react": "^7.13.13",
+      "@rollup/plugin-json": "^4.1.0",
+      "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+      "babel-jest": "^27.0.6",
+      "commitizen": "^4.2.4",
+      "cz-conventional-changelog": "^3.2.0",
+      "enzyme": "^3.11.0",
+      "eslint": "^7.18.0",
+      "eslint-config-airbnb": "^18.2.1",
+      "eslint-plugin-import": "^2.22.1",
+      "eslint-plugin-jsx-a11y": "^6.4.1",
+      "eslint-plugin-react": "^7.22.0",
+      "eslint-plugin-react-hooks": "^4.2.0",
+      "eslint-plugin-sonarjs": "^0.10.0",
+      "husky": "^5.2.0",
+      "jest": "^27.0.6",
+      "jest-sonar-reporter": "^2.0.0",
+      "jest-transform-stub": "^2.0.0",
+      "mock-local-storage": "^1.1.17",
+      "nock": "^13.0.11",
+      "node-fetch": "^2.6.1",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    },
+    "scripts": {
+      "build": "npm run rollup",
+      "start": "rollup --config --watch",
+      "start:test": ""
+      "rollup": "rollup --config",
+      "prepare": "npm run build",
+      "test": "jest --config ./jest.config.js",
+      "test:watch": "jest --config ./jest.config.js --watch",
+      "commit": "git pull && git add . && git cz && git push",
+      "push": "npm run commit",
+      "lint": "eslint ./**.js",
+      "lint:fix": "eslint ./**.js --fix",
+      "merge:master": "git checkout master && git pull && git merge develop && git push && git checkout develop",
+      "prepare:husky": "husky install",
+      "publish": "git checkout master && npm publish & git checkout develop",
+      "push-and-publish": "npm run push && npm run merge-master && npm run publish",
+      "prepare:all": "npm i && npm run prepare:husky && npm run install:testing-environment",
+      "cd:test": "cd src/__test__/testing-environment",
+      "install:testing-environment": "npm run cd:test && npm i && npm i -S ../../../ && ../../../"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/YoguiSan/formatadores.git"
+    },
+    "author": "Nelson Salles de Barros Filho",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/YoguiSan/formatadores/issues"
+    },
+    "homepage": "https://github.com/YoguiSan/formatadores#readme",
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+      }
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "npm run lint:fix & npm run test & npm run build"
+      }
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
