@@ -12,12 +12,14 @@ class Criptografia {
       console.error(error);
     }
 
-    this.hashString512 = (string) => {
+    this.hashString = (string, algorythm = 'sha512') => {
       if (!crypto) return false;
-      const md5sum = crypto?.createHash('sha512');
+      const md5sum = crypto?.createHash(algorythm);
 
       return md5sum.update(string).digest('hex');
     };
+
+    this.hashString512 = (string) => this.hashString(string, 'sha512');
 
     this.encrypt = (text) => {
       try {
@@ -78,8 +80,6 @@ class Criptografia {
     this.hashPassword = this.hashString;
   }
 }
-
-// export default Cryptography;
 const NotImplemented = () => {
   const ErrorMessage = 'Cryptography module has been disabled on browser due to errors, it may be available again in the future';
 
@@ -91,21 +91,22 @@ const NotImplemented = () => {
     encrypt: () => console.error(ErrorMessage),
     descriptografar: () => console.error(ErrorMessage),
     decrypt: () => console.error(ErrorMessage),
+    hashString: () => console.error(ErrorMessage),
     hashString512: () => console.error(ErrorMessage),
   };
 };
 
 const Cryptography = (
-  algorithm, secretKey, crypto = Crypto,
+  algorithm, secretKey, crypto,
 ) => {
   const isBrowser = typeof (window) !== 'undefined';
 
-  if (isBrowser) {
+  if (isBrowser && !crypto) {
     return NotImplemented();
   }
 
   try {
-    return new Criptografia(algorithm, secretKey, crypto);
+    return new Criptografia(algorithm, secretKey, crypto || Crypto);
   } catch (error) {
     console.error(error);
     return NotImplemented();

@@ -28,6 +28,23 @@ As funções de session storage foram compiladas em cinco funções simples, par
 - regraDeTresPorcentagem: executa uma regra de três para calcular uma porcentagem; requer dois parâmetros, total (qual quantidade representa 100%) e valor (do qual será retornada a porcentagem que representa)
 - obterElementoAleatorioArray: retorna um elemento aleatório do array fornecido
 
+## Funções de criptografia
+**Obs.: as funções de criptografia funcionam apenas em ambiente Node, não sendo possível utilizá-las no browser**
+
+Para utilizar as funções de criptografia, primeiro é preciso inicializar uma instância informando qual algoritmo será utilizado e a chave secreta.
+
+Ex.:
+```
+const = Crypto = Criptografia('aes-256-ctr', 'my$up3RuL7r4s3CR37k3y');
+```
+
+A partir desse momento, os métodos a seguir estarão disponíveis:
+
+- hashString: cria o hash de uma string utilizando um algoritmo informado (caso não seja, utilizará por padrão o *sha512*)
+  Obs.: também está exportado como **hashPassword** e **hashString512**, o qual sempre utilizará o *sha512*)
+- criptografar: criptografa uma string
+- descriptografar: descriptografa uma string
+
 =============================================================================================================================================================================
 
 # formatadores
@@ -50,10 +67,27 @@ The session storage functions were compiled into five simple functions, to make 
 ## URL functions
 - getQueryParams: return the query parameters in JSON format. Accepts an optional *query* param. If not informed, it will try to obtain them first from **window.location.search**, and if non existent, from **window.location.hash**
 
-## Key functions
+## Keyboard functions
 - addKeysListener: adds an event listener to the browser to execute an action when the specified keys are pressed together. Requires two parameters, *keys* (which must be an array of characters or an string) and *callback* (function to be executed when the key combination is pressed)
 
 ## Utility functions
 - generateRandomId: returns a random number; accepts an optional *multiplier* parameter
 - ruleOfThreePercentage: calculates a percentage using the rule of three method; requires two parameters, *total* (what amount represents 100%) and *value* (from which will be inferred what percentage it represents)
 - getRandomArrayElement: returns a random element from the provided array
+
+## Cryptography functions
+**Obs.: the cryptography functions work only in Node, therefore it's not currently possible to use them in a browser**
+
+To utilize the cryptography functions, first an instance must be created informing which algorith will be used and the secret key.
+
+Ex.:
+```
+const = Crypto = Criptografia('aes-256-ctr', 'my$up3RuL7r4s3CR37k3y');
+```
+
+From this point on, the following methods are available
+
+- hashString: hashes a string using an informed algorithm (if not, utilizará por will default to *sha512*)
+  Obs.: it's also exported as **hashPassword** and **hashString512**, the latter which will always use *sha512*)
+- encrypt: encrypts a string
+- decrypt: decrypts a string

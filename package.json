@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -75,7 +75,7 @@
   "scripts": {
     "build": "npm run rollup",
     "start": "rollup --config --watch",
-    "start:test": "npm run install:testing-environment && cd src/__test__/testing-environment && npm start",
+    "start:test": "npm run install:setup-testing-environment && cd src/__test__/testing-environment && npm start",
     "start:all": "concurrently --kill-others \"npm start\" \"npm run start:test\" --prefix-colors green,yellow",
     "rollup": "rollup --config",
     "prepare": "npm run build",
@@ -89,8 +89,10 @@
     "prepare:husky": "husky install",
     "publish": "git checkout master && npm publish & git checkout develop",
     "push-and-publish": "npm run push && npm run merge-master && npm run publish",
-    "prepare:all": "npm i & npm run prepare:husky & npm run install:testing-environment",
-    "install:testing-environment": "cd src/__test__/testing-environment && npm i && npm i -S ../../../ && cd ../../../"
+    "prepare:all": "npm i & npm run prepare:husky & npm run install:setup-testing-environment",
+    "install:test": "cd src/__test__/testing-environment && npm i",
+    "i:test": "npm run npm install:test",
+    "install:setup-testing-environment": "npm run install:test && cd src/__test__/testing-environment && npm i -S ../../../"
   },
   "repository": {
     "type": "git",

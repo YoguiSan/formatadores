@@ -1,5 +1,4 @@
 import React from 'react';
-// import Crypto from 'crypto-browserify';
 import { adicionarListenerTeclas, Criptografia } from 'formatadores';
 
 const App = () => {
@@ -7,14 +6,14 @@ const App = () => {
   const callback = () => console.log('combinação de teclas ativada');
 
   let Crypto;
+
   try {
     Crypto = Criptografia(
       'aes-256-ctr',
       'vOVH6sdmpNWjRRIqCc7rdxs01lwHzfr3',
-      // Crypto,
     );
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
   
   adicionarListenerTeclas(teclas, callback);
