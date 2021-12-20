@@ -1,9 +1,10 @@
-// import Crypto from 'crypto-browserify';
+import Crypto from 'crypto';
 
 class Criptografia {
-  constructor(algorithm, secretKey) {
+  constructor(algorithm, secretKey, crypto) {
     this.algorithm = algorithm;
     this.secretKey = secretKey;
+    this.moduleEnabled = true;
 
     try {
       this.iv = crypto?.randomBytes(16);
@@ -74,32 +75,41 @@ class Criptografia {
     };
 
     this.descriptografar = this.decrypt;
-
     this.hashPassword = this.hashString;
   }
 }
 
-const Cryptography = (
-  algorithm, secretKey, crypto,
-) => {
-  try {
-    return new Criptografia(algorithm, secretKey, crypto);
-  } catch (error) {
-    console.error(error);
-    return false;
-  }
-};
-
 // export default Cryptography;
 const NotImplemented = () => {
-  const ErrorMessage = 'Cryptography module has been disabled due to errors, it may be available again in the future';
+  const ErrorMessage = 'Cryptography module has been disabled on browser due to errors, it may be available again in the future';
+
   console.error(ErrorMessage);
+
   return {
+    moduleEnabled: false,
     criptografar: () => console.error(ErrorMessage),
     encrypt: () => console.error(ErrorMessage),
     descriptografar: () => console.error(ErrorMessage),
     decrypt: () => console.error(ErrorMessage),
+    hashString512: () => console.error(ErrorMessage),
+  };
+};
+
+const Cryptography = (
+  algorithm, secretKey, crypto = Crypto,
+) => {
+  const isBrowser = typeof (window) !== 'undefined';
+
+  if (isBrowser) {
+    return NotImplemented();
+  }
+
+  try {
+    return new Criptografia(algorithm, secretKey, crypto);
+  } catch (error) {
+    console.error(error);
+    return NotImplemented();
   }
 };
 
-export default NotImplemented;
+export default Cryptography;

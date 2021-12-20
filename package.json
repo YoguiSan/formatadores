@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -47,6 +47,7 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.13.13",
     "@rollup/plugin-json": "^4.1.0",
+    "@testing-library/jest-dom": "^5.16.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "babel-jest": "^27.0.6",
     "commitizen": "^4.2.4",

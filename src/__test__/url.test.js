@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { separarParametrosUrl } from '..';
 
 describe('testes de parâmetros da URL', () => {
