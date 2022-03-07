@@ -88,7 +88,7 @@
     "merge:master": "git checkout master && git pull && git merge develop && git push && git checkout develop",
     "prepare:husky": "husky install",
     "publish": "git checkout master && npm publish & git checkout develop",
-    "push:publish": "npm run push && npm run merge-master && npm run publish",
+    "push:publish": "npm run push && npm run merge:master && npm run publish",
     "prepare:all": "npm i & npm run prepare:husky & npm run install:setup-testing-environment",
     "install:test": "cd src/__test__/testing-environment && npm i",
     "i:test": "npm run npm install:test",
