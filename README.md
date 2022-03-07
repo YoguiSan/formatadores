@@ -35,7 +35,7 @@ Para utilizar as funções de criptografia, primeiro é preciso inicializar uma 
 
 Ex.:
 ```
-const = Crypto = Criptografia('aes-256-ctr', 'my$up3RuL7r4s3CR37k3y');
+const Crypto = Criptografia('aes-256-ctr', 'my$up3RuL7r4s3CR37k3y');
 ```
 
 A partir desse momento, os métodos a seguir estarão disponíveis:
@@ -78,11 +78,11 @@ The session storage functions were compiled into five simple functions, to make 
 ## Cryptography functions
 **Obs.: the cryptography functions work only in Node, therefore it's not currently possible to use them in a browser**
 
-To utilize the cryptography functions, first an instance must be created informing which algorith will be used and the secret key.
+To utilize the cryptography functions, first an instance must be created informing which algorithm will be used and the secret key.
 
 Ex.:
 ```
-const = Crypto = Criptografia('aes-256-ctr', 'my$up3RuL7r4s3CR37k3y');
+const Crypto = Criptografia('aes-256-ctr', 'my$up3RuL7r4s3CR37k3y');
 ```
 
 From this point on, the following methods are available
