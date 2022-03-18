@@ -1,6 +1,14 @@
 export const separarParametrosUrl = (informedQuery) => {
   if (!informedQuery && window?.location?.search) {
-    return new URLSearchParams(window?.location?.search);
+    const params = new URLSearchParams(window?.location?.search);
+
+    const parsedParams = {};
+
+    for (const key of params.keys()) {
+      parsedParams[key] = params.get(key);
+    };
+
+    return parsedParams;
   }
 
   const query = informedQuery || window?.location?.search || window?.location?.hash;

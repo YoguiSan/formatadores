@@ -1,10 +1,13 @@
 import React from 'react';
-import { adicionarListenerTeclas, Criptografia } from 'formatadores';
+import { adicionarListenerTeclas, Criptografia, obterPosicaoRolagem, separarParametrosUrl } from 'formatadores';
 
 const App = () => {
   const teclas = ['a', 'b', 'c', 'd'];
   const callback = () => console.log('combinação de teclas ativada');
-
+  
+  const scroll = obterPosicaoRolagem()
+  console.log(scroll)
+ 
   let Crypto;
 
   try {
@@ -12,28 +15,19 @@ const App = () => {
       'aes-256-ctr',
       'vOVH6sdmpNWjRRIqCc7rdxs01lwHzfr3',
     );
+
+    console.log('Crypto module enabled: ', Crypto.moduleEnabled);
   } catch (error) {
     console.error(error);
   }
   
-  adicionarListenerTeclas(teclas, callback);
+  console.log(separarParametrosUrl().keys())
 
-  const stringToEncrypt = 'stringToBeCryptographed';
-  const encryptedString = Crypto.criptografar(stringToEncrypt);
-  const decryptedString = Crypto.descriptografar(stringToEncrypt);
+  adicionarListenerTeclas(teclas, callback);
 
   return (
     <>
       <h1>Ambiente de teste do app Formatadores</h1>
-      <p>
-        String a criptografar: {stringToEncrypt}
-      </p>
-      <p>
-        String criptografada: {encryptedString}
-      </p>
-      <p>
-        String descriptografada: {decryptedString}
-      </p>
     </>
   )
 };

@@ -42,3 +42,8 @@ export {
   Criptografia,
   Cryptography,
 };
+
+export {
+  obterPosicaoRolagem,
+  obterPosicaoRolagem as getScrollPosition,
+} from './janela';

@@ -16,24 +16,24 @@ describe('testes de parâmetros da URL', () => {
 
   global.window = Object.create(window);
 
-  const url = 'http://tes.te';
-  const search = '?param=1';
+  const url = 'http://testi.ng';
+  const search = {
+    param: '1',
+  };
   const hash = {
     '#/?hash': 'hash',
   };
 
-  Object.defineProperty(window, 'location', {
-    value: {
-      href: url,
-      search,
-    },
-    writable: true,
-  });
-
   test('deve retornar um objeto com os parâmetros da URL separados (sem informar window.location.search como parâmetro)', () => {
-    expect(separarParametrosUrl()).toEqual({
-      param: '1',
+    Object.defineProperty(window, 'location', {
+      value: {
+        href: url,
+        search,
+      },
+      writable: true,
     });
+
+    expect(separarParametrosUrl()).toEqual(search);
   });
 
   test('retorna um objeto vazio caso não exista query informada manualmente, nem no window.location.search', () => {
@@ -44,6 +44,7 @@ describe('testes de parâmetros da URL', () => {
       },
       writable: true,
     });
+
     expect(separarParametrosUrl()).toEqual({});
   });
 
