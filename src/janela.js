@@ -1,45 +1,59 @@
-/* eslint-disable import/prefer-default-export */
-
 export const obterTamanhoElemento = (elem = window?.document?.documentElement) => {
-  const {
-    scrollWidth: width,
-    scrollHeight: height,
-  } = elem;
+  const element = typeof (elem) === 'string'
+    ? document.getElementById(elem)
+    : elem;
 
-  return {
-    width,
-    height,
-  };
-};
-
-export const obterPosicaoRolagem = (elem = window?.document?.documentElement) => {
-  const {
-    width: widthScreen,
-    height: heightScreen,
-  } = obterTamanhoElemento(window?.document?.documentElement);
-
-  const {
-    width: widthElement,
-    height: heightElement,
-  } = obterTamanhoElemento(elem);
-
-  if (elem) {
-    const scrollX = elem.scrollLeft;
-    const scrollY = elem.scrollTop;
+  if (element) {
+    const {
+      scrollWidth: width,
+      scrollHeight: height,
+    } = element;
 
     return {
-      scrollX,
-      scrollY,
-      x: scrollX,
-      y: scrollY,
-      horizontal: scrollX,
-      vertical: scrollY,
-      widthElement,
-      heightElement,
-      widthScreen,
-      heightScreen,
+      width,
+      height,
     };
   }
 
   return {};
 };
+
+export const obterPosicaoRolagem = (elem) => {
+  const result = {};
+
+  const {
+    width: widthScreen,
+    height: heightScreen,
+  } = obterTamanhoElemento(window?.document?.documentElement);
+
+  const scrollXWindow = window?.document?.documentElement?.scrollLeft;
+  const scrollYWindow = window?.document?.documentElement?.scrollTop;
+
+  result.widthScreen = widthScreen;
+  result.heightScreen = heightScreen;
+
+  result.scrollXWindow = scrollXWindow;
+  result.scrollYWindow = scrollYWindow;
+
+  if (elem) {
+    const element = typeof (elem) === 'string'
+      ? document.getElementById(elem)
+      : elem;
+
+    const {
+      width: widthElement,
+      height: heightElement,
+    } = obterTamanhoElemento(element);
+
+    const scrollX = scrollXWindow - element.offsetLeft;
+    const scrollY = scrollYWindow - element.offsetTop;
+
+    result.scrollX = scrollX;
+    result.scrollY = scrollY;
+    result.widthElement = widthElement;
+    result.heightElement = heightElement;
+  }
+  return result;
+};
+
+export const obterRolagemJanela = obterPosicaoRolagem();
