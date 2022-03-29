@@ -83,6 +83,7 @@
     "test:watch": "jest --config ./jest.config.js --watch",
     "commit": "git pull && git add . && git cz && git push",
     "push": "npm run commit",
+    "push:merge": "npm run push && npm run merge:master",
     "lint": "eslint ./**.js",
     "lint:fix": "eslint ./**.js --fix",
     "merge:master": "git checkout master && git pull && git merge develop && git push && git checkout develop",
