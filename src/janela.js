@@ -1,5 +1,28 @@
 /* eslint-disable import/prefer-default-export */
-export const obterPosicaoRolagem = (elem = window?.document?.body) => {
+
+export const obterTamanhoElemento = (elem = window?.document?.documentElement) => {
+  const {
+    scrollWidth: width,
+    scrollHeight: height,
+  } = elem;
+
+  return {
+    width,
+    height,
+  };
+};
+
+export const obterPosicaoRolagem = (elem = window?.document?.documentElement) => {
+  const {
+    width: widthScreen,
+    height: heightScreen,
+  } = obterTamanhoElemento(window?.document?.documentElement);
+
+  const {
+    width: widthElement,
+    height: heightElement,
+  } = obterTamanhoElemento(elem);
+
   if (elem) {
     const scrollX = elem.scrollLeft;
     const scrollY = elem.scrollTop;
@@ -11,6 +34,10 @@ export const obterPosicaoRolagem = (elem = window?.document?.body) => {
       y: scrollY,
       horizontal: scrollX,
       vertical: scrollY,
+      widthElement,
+      heightElement,
+      widthScreen,
+      heightScreen,
     };
   }
 

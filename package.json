@@ -1,6 +1,6 @@
 {
   "name": "formatadores",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Formatadores simples de dados e funções utilitárias",
   "keywords": [
     "formatadores",
@@ -93,7 +93,7 @@
     "prepare:all": "npm i & npm run prepare:husky & npm run install:setup-testing-environment",
     "install:test": "cd src/__test__/testing-environment && npm i",
     "i:test": "npm run npm install:test",
-    "install:setup-testing-environment": "npm run install:test && cd src/__test__/testing-environment && npm i -S ../../../"
+    "install:setup-testing-environment": "npm run build && npm run install:test && cd src/__test__/testing-environment && npm i -S ../../../"
   },
   "repository": {
     "type": "git",

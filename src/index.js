@@ -46,4 +46,6 @@ export {
 export {
   obterPosicaoRolagem,
   obterPosicaoRolagem as getScrollPosition,
+  obterTamanhoElemento,
+  obterTamanhoElemento as getElementSize,
 } from './janela';
