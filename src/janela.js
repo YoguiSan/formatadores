@@ -22,15 +22,15 @@ export const obterPosicaoRolagem = (elem) => {
   const result = {};
 
   const {
-    width: widthScreen,
-    height: heightScreen,
+    width: widthWindow,
+    height: heightWindow,
   } = obterTamanhoElemento(window?.document?.documentElement);
 
   const scrollXWindow = window?.document?.documentElement?.scrollLeft;
   const scrollYWindow = window?.document?.documentElement?.scrollTop;
 
-  result.widthScreen = widthScreen;
-  result.heightScreen = heightScreen;
+  result.widthWindow = widthWindow;
+  result.heightWindow = heightWindow;
 
   result.scrollXWindow = scrollXWindow;
   result.scrollYWindow = scrollYWindow;
@@ -56,4 +56,4 @@ export const obterPosicaoRolagem = (elem) => {
   return result;
 };
 
-export const obterRolagemJanela = obterPosicaoRolagem();
+export const obterRolagemJanela = () => obterPosicaoRolagem();
