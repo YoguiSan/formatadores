@@ -5,7 +5,7 @@ import external from 'rollup-plugin-peer-deps-external';
 import json from '@rollup/plugin-json';
 import nodePolyfills from 'rollup-plugin-polyfill-node';
 
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 

@@ -6,7 +6,7 @@ const fs = require('fs');
 let packageJsonUrl = '../../package.json';
 let metaJsonUrl = './public/meta.json';
 
-process.argv.map((arg) => {
+process.argv.forEach((arg) => {
   if (arg.indexOf('--metaJsonUrl=') > -1) {
     metaJsonUrl = arg.replace('--metaJsonUrl=', '');
   }
@@ -28,8 +28,8 @@ const jsonContent = JSON.stringify(jsonData);
 
 fs.writeFile(metaJsonUrl, jsonContent, 'utf8', (err) => {
   if (err) {
-    console.log('Ocorreu um erro ao gerar o arquivo meta.json');
-    return console.log(err);
+    console.error('Ocorreu um erro ao gerar o arquivo meta.json');
+    return console.error(err);
   }
 
   return console.log(`meta.json salvo com o número da versão mais recente ${(appVersion)}`);
